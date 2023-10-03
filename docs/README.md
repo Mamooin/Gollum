@@ -16,7 +16,7 @@
 - нести изменения в файл README.md
 
 ## История изменения проекта с хешами комитов 
-''Microsoft Windows [Version 10.0.22000.2416]
+'''Microsoft Windows [Version 10.0.22000.2416]
 (c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
 C:\Коды уника\1\geometric_lib>git log
@@ -46,4 +46,4 @@ Date:   Mon Sep 18 16:26:40 2023 +0300
 
 commit d078c8d9ee6155f3cb0e577d28d337b791de28e2
 Author: smartiqa <info@smartiqa.ru>
-Date:   Thu Mar 4 14:55:29 2021 +0300''
+Date:   Thu Mar 4 14:55:29 2021 +0300'''
