@@ -1,22 +1,22 @@
-name: Unit Tester
+name: Tester
 
 on: [push]
 
 jobs:
   test:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
 
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
 
-    - name: Run tests
-      run: |
-        python -m unittest tests_geometric_lib.py
+      - name: Run tests
+        run: python alltested.py
