@@ -1,21 +1,26 @@
 name: Unit Tester
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-
-    - name: Run tests
-      run: python -m unittest discover -s tests -p "*_test.py"
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          
+      - name: Run tests
+        run: python -m unittest discover -s tests -p "*_test.py"
