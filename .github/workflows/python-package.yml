@@ -18,4 +18,5 @@ jobs:
         python-version: '3.9'
 
     - name: Run tests
-      run: python -m unittest discover -s tests -p "*_test.py"
+      run: |
+        python -m unittest tests_geometric_lib.py
